@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Edb0qPPHeNSsVmFbHkChnQtCex8PhK3MSnwRkH6oTPw=",
+  "Source": "WSB_API",
+  "BasePath": "_content/WSB_API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

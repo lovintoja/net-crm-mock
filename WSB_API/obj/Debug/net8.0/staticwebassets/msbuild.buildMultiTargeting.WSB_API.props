@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\WSB_API.props" />
+</Project>
