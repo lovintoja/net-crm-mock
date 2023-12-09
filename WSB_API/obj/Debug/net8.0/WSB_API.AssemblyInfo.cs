@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WSB_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c69d160aec55a8bffcb754ac19b5ca0d9ff40f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("WSB_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WSB_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

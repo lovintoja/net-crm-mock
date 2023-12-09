@@ -31,3 +31,6 @@ C:\Users\Filip\Desktop\repos\wsb-backend\WSB_API\obj\Debug\net8.0\refint\WSB_API
 C:\Users\Filip\Desktop\repos\wsb-backend\WSB_API\obj\Debug\net8.0\WSB_API.pdb
 C:\Users\Filip\Desktop\repos\wsb-backend\WSB_API\obj\Debug\net8.0\WSB_API.genruntimeconfig.cache
 C:\Users\Filip\Desktop\repos\wsb-backend\WSB_API\obj\Debug\net8.0\ref\WSB_API.dll
+C:\Users\Filip\Desktop\repos\wsb-backend\WSB_API\bin\Debug\net8.0\Authentication.dll
+C:\Users\Filip\Desktop\repos\wsb-backend\WSB_API\bin\Debug\net8.0\Authentication.pdb
+C:\Users\Filip\Desktop\repos\wsb-backend\WSB_API\obj\Debug\net8.0\WSB_API.sourcelink.json
