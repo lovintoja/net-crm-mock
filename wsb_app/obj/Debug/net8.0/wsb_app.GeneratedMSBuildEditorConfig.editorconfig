@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\fdumanow\Desktop\repos\wsb-backend\wsb_app
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/fdumanow/Desktop/repos/wsb-backend/wsb_app/Pages/Account/AdminForDebug.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxBZG1pbkZvckRlYnVnLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/fdumanow/Desktop/repos/wsb-backend/wsb_app/Pages/Account/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -52,6 +56,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/fdumanow/Desktop/repos/wsb-backend/wsb_app/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/fdumanow/Desktop/repos/wsb-backend/wsb_app/Pages/Customers/AddCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXEFkZEN1c3RvbWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/fdumanow/Desktop/repos/wsb-backend/wsb_app/Pages/Customers/ManageCustomers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXE1hbmFnZUN1c3RvbWVycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/fdumanow/Desktop/repos/wsb-backend/wsb_app/Pages/Error.cshtml]

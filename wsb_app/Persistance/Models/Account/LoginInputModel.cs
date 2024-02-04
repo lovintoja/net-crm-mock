@@ -1,4 +1,4 @@
-﻿namespace wsb_app.Persistance.Models;
+﻿namespace wsb_app.Persistance.Models.Account;
 
 public class LoginInputModel
 {

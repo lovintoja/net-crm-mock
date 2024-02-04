@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using wsb_app.Persistance.Models;
+using wsb_app.Persistance.Models.Account;
 
 namespace wsb_app.Pages.Account
 {

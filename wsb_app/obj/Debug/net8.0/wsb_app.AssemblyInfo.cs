@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("wsb_app")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c69d160aec55a8bffcb754ac19b5ca0d9ff40f7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a48a8198305d20913dc5e3a38b83f43c5f5c6ef")]
 [assembly: System.Reflection.AssemblyProductAttribute("wsb_app")]
 [assembly: System.Reflection.AssemblyTitleAttribute("wsb_app")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

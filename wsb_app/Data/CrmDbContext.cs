@@ -1,12 +1,13 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using wsb_app.Persistance.Models.Customers;
 
-public class ApplicationDbContext : IdentityDbContext<IdentityUser>
+namespace wsb_app.Data;
+
+public class CrmDbContext : DbContext
 {
     public string DbPath { get; }
 
-    public ApplicationDbContext()
+    public CrmDbContext()
     {
         var folder = Environment.SpecialFolder.LocalApplicationData;
         var path = Environment.GetFolderPath(folder);
@@ -15,4 +16,7 @@ public class ApplicationDbContext : IdentityDbContext<IdentityUser>
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
         => options.UseSqlite($"Data Source={DbPath}");
+
+    public DbSet<Customer> Customers { get; set; }
+    public DbSet<Contact> Contacts { get; set; }
 }

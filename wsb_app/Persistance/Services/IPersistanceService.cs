@@ -1,6 +1,4 @@
-﻿using AppPersistance.Models;
-
-namespace AppPersistance;
+﻿namespace AppPersistance;
 public interface IPersistanceService
 {
     Task AddRoles();

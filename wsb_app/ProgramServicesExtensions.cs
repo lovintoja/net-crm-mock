@@ -1,6 +1,6 @@
 ﻿using AppPersistance;
-using AppPersistance.Models;
 using Microsoft.AspNetCore.Identity;
+using wsb_app.Data;
 
 namespace wsb_app;
 
@@ -20,6 +20,7 @@ public static class ProgramServicesExtensions
         });
 
         services.AddDbContext<ApplicationDbContext>();
+        services.AddDbContext<CrmDbContext>();
     }
 
     public static void UseRequiredServices(this WebApplication app)

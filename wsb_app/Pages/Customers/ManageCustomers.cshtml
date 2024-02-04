@@ -1,0 +1,74 @@
+﻿@page
+@model wsb_app.Pages.Customers.ManageCustomersModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h2>Manage Customers</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var customer in Model.Customers)
+    {
+        <tr>
+            <td>@customer.Name</td>
+            <td>@customer.Email</td>
+            <td>
+                <!-- Trigger modal for edit -->
+                <button type="button" onclick="showCustomerEditModal('@customer')">
+                    Edit
+                </button>
+                <!-- Post form for delete -->
+                <form method="post" style="display:inline" onsubmit="return confirm('Are you sure?');">
+                    <input type="hidden" name="id" value="@customer.CustomerId" />
+                    <button type="submit" formaction="./ManageCustomers?handler=Delete">Delete</button>
+                </form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<a href="./AddCustomer" class="btn btn-primary">Add New Customer</a>
+
+
+<!-- Edit Customer Modal -->
+<div class="modal fade" id="editCustomerModal" tabindex="-1" aria-labelledby="editCustomerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editCustomerModalLabel">Edit Customer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="editCustomerForm" method="post">
+                <div class="modal-body">
+                    <input type="hidden" name="CustomerId" id="editCustomerId">
+                    <div class="form-group">
+                        <label for="editName">Name</label>
+                        <input type="text" class="form-control" id="editName" name="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editEmail">Email</label>
+                        <input type="email" class="form-control" id="editEmail" name="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editPhone">Phone number</label>
+                        <input type="text" class="form-control" id="editPhone" name="PhoneNumber" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

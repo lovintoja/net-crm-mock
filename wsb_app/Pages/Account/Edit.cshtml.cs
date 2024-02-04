@@ -1,13 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using AppPersistance.Models;
 using Microsoft.AspNetCore.Identity;
+using wsb_app.Persistance.Models.Account;
 
 namespace wsb_app.Pages.Account
 {
@@ -35,6 +30,11 @@ namespace wsb_app.Pages.Account
             {
                 return NotFound();
             }
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (!_userManager.IsInRoleAsync(currentUser, "Admin").Result && id != currentUser.Id)
+            {
+                return Forbid();
+            }
 
             var userModel =  _userManager.FindByIdAsync(id).Result;
 
@@ -56,6 +56,12 @@ namespace wsb_app.Pages.Account
 
             try
             {
+                var currentUser = await _userManager.GetUserAsync(User);
+                if (!_userManager.IsInRoleAsync(currentUser, "Admin").Result && UserModel.Id != currentUser.Id)
+                {
+                    return Forbid();
+                }
+
                 await _userManager.UpdateAsync(UserModel);
                 await _userManager.ChangePasswordAsync(UserModel, CurrentPassword, NewPassword);
             }

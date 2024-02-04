@@ -3,39 +3,34 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 
-@{
-    ViewData["Title"] = "Index";
-}
+<h2>Account Details</h2>
 
-<h1>Index</h1>
+<div>
+    <h4>User Information</h4>
+    <dl class="row">
+        <dt class="col-sm-2">
+            User ID:
+        </dt>
+        <dd class="col-sm-10">
+            @Model.CurrentUser.Id
+        </dd>
+        <dt class="col-sm-2">
+            Email:
+        </dt>
+        <dd class="col-sm-10">
+            @Model.CurrentUser.Email
+        </dd>
+        <dt class="col-sm-2">
+            UserName:
+        </dt>
+        <dd class="col-sm-10">
+            @Model.CurrentUser.UserName
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="Id">Edit</a> |
+</div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.UserModel[0].Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserModel[0].UserName)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.UserModel) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserName)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+
