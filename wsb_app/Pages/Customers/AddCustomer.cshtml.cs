@@ -1,9 +1,12 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using wsb_app.Data;
 using wsb_app.Persistance.Models.Customers;
 
 namespace wsb_app.Pages.Customers;
+
+[Authorize]
 public class AddCustomerModel : PageModel
 {
     private readonly CrmDbContext _context;

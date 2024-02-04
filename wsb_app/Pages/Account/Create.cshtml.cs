@@ -1,16 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.AspNetCore.Identity;
 using wsb_app.Persistance.Models.Account;
+using Microsoft.AspNetCore.Authorization;
 
 namespace wsb_app.Pages.Account
 {
+    [AllowAnonymous]
     public class CreateModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
@@ -26,6 +22,10 @@ namespace wsb_app.Pages.Account
 
         public IActionResult OnGet()
         {
+            if (User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                return RedirectToPage("/Index");
+            }
             return Page();
         }
 
@@ -34,6 +34,10 @@ namespace wsb_app.Pages.Account
 
         public async Task<IActionResult> OnPostAsync()
         {
+            if (User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                return RedirectToPage("/Index");
+            }
             if (!ModelState.IsValid)
             {
                 return Page();

@@ -8,7 +8,7 @@ using wsb_app.Persistance.Models.Customers;
 
 namespace wsb_app.Pages.Account
 {
-    [Authorize] // Ensure only authenticated users can access this page
+    [Authorize]
     public class IndexModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
