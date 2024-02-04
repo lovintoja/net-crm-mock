@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wsb_app", "wsb_app.csproj", "{04133A1F-C36A-440C-A6EB-35FFE0D310B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRM mock", "CRM mock.csproj", "{04133A1F-C36A-440C-A6EB-35FFE0D310B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

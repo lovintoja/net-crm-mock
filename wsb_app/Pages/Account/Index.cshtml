@@ -5,31 +5,34 @@
 
 <h2>Account Details</h2>
 
-<div>
-    <h4>User Information</h4>
-    <dl class="row">
-        <dt class="col-sm-2">
-            User ID:
-        </dt>
-        <dd class="col-sm-10">
-            @Model.CurrentUser.Id
-        </dd>
-        <dt class="col-sm-2">
-            Email:
-        </dt>
-        <dd class="col-sm-10">
-            @Model.CurrentUser.Email
-        </dd>
-        <dt class="col-sm-2">
-            UserName:
-        </dt>
-        <dd class="col-sm-10">
-            @Model.CurrentUser.UserName
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-page="./Edit" asp-route-id=@Model.CurrentUser.Id>Edit</a> |
+<div class="container mt-5">
+    <!-- Jumbotron -->
+    <div class="jumbotron p-5 bg-light border rounded-3">
+        <h4>User Information</h4>
+        <dl class="row">
+            <dt class="col-sm-2">
+                User ID:
+            </dt>
+            <dd class="col-sm-10">
+                @Model.CurrentUser.Id
+            </dd>
+            <dt class="col-sm-2">
+                Email:
+            </dt>
+            <dd class="col-sm-10">
+                @Model.CurrentUser.Email
+            </dd>
+            <dt class="col-sm-2">
+                UserName:
+            </dt>
+            <dd class="col-sm-10">
+                @Model.CurrentUser.UserName
+            </dd>
+            <dd class="col-sm-10">
+                <a asp-page="./Edit" asp-route-id=@Model.CurrentUser.Id>Edit</a> |
+            </dd>
+        </dl>
+    </div>
 </div>
 
 
