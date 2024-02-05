@@ -1,1 +1,3 @@
-/wsb_app/.vs
+/.vs
+/bin/Debug
+/obj
