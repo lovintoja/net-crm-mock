@@ -1,0 +1,62 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+body {
+    background-color: #f0e68c; /* Light grey background for a subtle look */
+}
+
+.navbar {
+    background-color: #0056b3; /* Bootstrap primary color */
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important; /* White text for better contrast */
+}
+
+.nav-link:hover {
+    background-color: #0056b3; /* Slightly darker shade on hover */
+}
+
+.card {
+    border: 1px solid #007bff; /* Add primary color border to cards */
+}
+
+.btn-primary {
+    background-color: #0069d9; /* Adjust primary button color */
+    border-color: #0062cc;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    border-color: #0056b3;
+}
+
+.footer {
+    background-color: #007bff; /* Footer background */
+    color: #fff; /* White text color */
+    padding: 10px 0; /* Padding for aesthetic spacing */
+}
+
+.footer a {
+    color: #ffcd39; /* Bright link color for contrast */
+}
