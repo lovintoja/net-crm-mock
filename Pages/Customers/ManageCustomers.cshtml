@@ -4,40 +4,51 @@
 
 <h2>Manage Customers</h2>
 
-<table class="table">
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Actions</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var customer in Model.Customers)
-    {
-        <tr>
-            <td>@customer.Name</td>
-            <td>@customer.Email</td>
-            <td>
-                <!-- Trigger modal for edit -->
-                <button type="button" onclick="showCustomerEditModal('@customer')">
-                    Edit
-                </button>
-                <!-- Post form for delete -->
-                <form method="post" style="display:inline" onsubmit="return confirm('Are you sure?');">
-                    <input type="hidden" name="id" value="@customer.CustomerId" />
-                    <button type="submit" formaction="./ManageCustomers?handler=Delete">Delete</button>
-                </form>
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
+<div class="container mt-5">
+    <div class="jumbotron p-5 bg-light border rounded-3">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var customer in Model.Customers)
+                {
+                    <tr>
+                        <td>@customer.Name</td>
+                        <td>@customer.Email</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" onclick="showCustomerEditModal('@customer')">
+                                Edit
+                            </button>
+                            <form method="get" action="@Url.Page("./AddContact")">
+                                <input type="hidden" name="customerId" value="@customer.CustomerId" />
+                                <button type="submit" class="btn btn-primary">Add contact</button>
+                            </form>
+                            <form method="get" action="@Url.Page("./ListContacts")">
+                                <input type="hidden" name="customerId" value="@customer.CustomerId" />
+                                <button type="submit" class="btn btn-primary">List contacts</button>
+                            </form>
 
-<a href="./AddCustomer" class="btn btn-primary">Add New Customer</a>
+                            <form method="post" style="display:inline" onsubmit="return confirm('Are you sure?');">
+                                <input type="hidden" name="id" value="@customer.CustomerId" />
+                                <button type="submit" class="btn btn-primary" formaction="./ManageCustomers?handler=Delete">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <a href="./AddCustomer" class="btn btn-primary">Add New Customer</a>
+    </div>
+</div>
 
 
-<!-- Edit Customer Modal -->
+
 <div class="modal fade" id="editCustomerModal" tabindex="-1" aria-labelledby="editCustomerModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

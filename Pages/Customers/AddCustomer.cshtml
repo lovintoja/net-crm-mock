@@ -1,22 +1,27 @@
 ﻿@page
 @model wsb_app.Pages.Customers.AddCustomerModel
 
-<form method="post">
-    <div class="form-group">
-        <label asp-for="Customer.Name"></label>
-        <input asp-for="Customer.Name" class="form-control" />
-        <span asp-validation-for="Customer.Name" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Customer.Email"></label>
-        <input asp-for="Customer.Email" class="form-control" />
-        <span asp-validation-for="Customer.Email" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Customer.PhoneNumber"></label>
-        <input asp-for="Customer.PhoneNumber" class="form-control" />
-        <span asp-validation-for="Customer.PhoneNumber" class="text-danger"></span>
-    </div>
+<div class="container mt-5">
+    <!-- Jumbotron -->
+    <div class="jumbotron p-5 bg-light border rounded-3">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="Customer.Name"></label>
+                <input asp-for="Customer.Name" class="form-control" />
+                <span asp-validation-for="Customer.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.Email"></label>
+                <input asp-for="Customer.Email" class="form-control" />
+                <span asp-validation-for="Customer.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.PhoneNumber"></label>
+                <input asp-for="Customer.PhoneNumber" class="form-control" />
+                <span asp-validation-for="Customer.PhoneNumber" class="text-danger"></span>
+            </div>
 
-    <button type="submit" class="btn btn-primary">Add Customer</button>
-</form>
+            <button type="submit" class="btn btn-primary">Add Customer</button>
+        </form>
+    </div>
+</div>
